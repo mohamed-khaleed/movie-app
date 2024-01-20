@@ -1,13 +1,87 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color:  #1b222c;
+  color: #fdf0d5;
+}
+ 
+.bg-main-color{
+  background-color: #fdf0d5;
+}
+.main-color{
+  color: #fdf0d5;
+}
+.secondary-color{
+  color: #1b222c ;
+}
+.bg-secondary-color{
+  background-color: #1b222c;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+.movie-img{
+  border-radius: 10px;
+}
+.movie-details-img{
+  height: 600px;
+  border-radius: 10px;
+}
+.search-btn{
+  border-radius: 5px;
+  padding: 6px;
+  border: none;
+  width: 100px;
+
+}
+.watching-list-btn{
+  border-radius: 5px;
+  padding: 6px;
+  border: none;
+  margin-top: 10px;
+  width: 200px;
+  background-color: #fdf0d5;
+}
+.search-box{
+  border-radius: 10px;
+}
+.search-box input{
+  border: none;
+  color: #fdf0d5 !important;
+}
+.search-box input::placeholder{
+  color: #fdf0d5;
+}
+.search-box input:focus{
+  background-color: #1b222c;
+}
+.company-logo{
+  width: 200px;
+  
+}
+.genres-icon{
+  background-color: #fdf0d5 !important;
+}
+.movie-card i {
+  cursor: pointer;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.watching-list-container{
+  height: 80vh;
+}
+.broken-heart{
+  font-size: 200px;
+}
+.watchingList-card{
+  border: #fdf0d5 2px solid;
+}
+.vh-80 {
+  height: 80vh;
+}
+.loaderImg{
+  width: 500px;
 }
