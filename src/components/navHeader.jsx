@@ -34,20 +34,18 @@ function NavHeader() {
               className="me-3 text-dark"
               id="navbarScrollingDropdown"
             >
-              <NavDropdown.Item href="#" onClick={() => handleLanguageClick('en')}>En</NavDropdown.Item>
-              <NavDropdown.Item href="#" onClick={() => handleLanguageClick('ar')}>Ar</NavDropdown.Item>
+              <NavDropdown.Item className="lang-item " href="#" onClick={() => handleLanguageClick('en')}>En</NavDropdown.Item>
+              <NavDropdown.Item className="lang-item " href="#" onClick={() => handleLanguageClick('ar')}>Ar</NavDropdown.Item>
                
                
             
             </NavDropdown>
             <Link className="me-3" to="watchingList">
-              <button type="button" className="btn btn main-color bg-secondary-color">
+              <button type="button" className="btn nav-btn main-color bg-secondary-color">
                 watching list <span className="badge bg-secondary-color main-color">{watchingListCount}</span>
               </button>
             </Link>
-            <Link className="me-3 main-color bg-secondary-color" to="register">
-               <button className="bg-secondary-color btn main-color">register</button>
-            </Link>
+          
           </Navbar.Collapse>
         </Container>
       </Navbar>

@@ -19,7 +19,7 @@ function App() {
   const  MovieDetail = React.lazy(()=>import("./pages/movieDetail"))
   const NotFound = React.lazy(()=>import("./pages/notFound"))
   const WatchingList = React.lazy(()=>import("./pages/watchingList"))
-  const RegistrationPage = React.lazy(()=>import("./pages/register"))
+
   
 
 
@@ -31,7 +31,7 @@ function App() {
      <Suspense fallback={<Loading/>}>
      <Routes>
         <Route path='/' element={<Movies/>} />
-        <Route path='/register' element={< RegistrationPage/>} />
+      
         <Route path='watchingList' element={<WatchingList/>} />
         <Route path='movie-Detail/:id' element={<MovieDetail/>} />
         <Route path='*' element={<NotFound/>} />

@@ -85,3 +85,17 @@ a{
 .loaderImg{
   width: 500px;
 }
+.nav-btn:hover{
+  background-color: #1b222c;
+  color: #fdf0d5;
+}
+#navbarScrollingDropdown{
+  background-color: #1b222c;
+  border-radius: 5px;
+  padding: 6px;
+  border: none;
+
+  width: 120px;
+  text-align: center;
+  color: #fdf0d5;
+}

@@ -4,9 +4,12 @@ import MovieCard from "./movieCard";
 
 import { NavLangContext } from '../context/navLang';
 import axios from "axios";
-function MoviesList({ movies, setMovies }) {
+
+
+function MoviesList({ movies, setMovies , searchedMovies,searchQuery }) {
   const { selectedLanguage} = useContext(NavLangContext)
-  console.log(selectedLanguage)
+ 
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -19,9 +22,16 @@ function MoviesList({ movies, setMovies }) {
 
     fetchData();
   }, [setMovies,selectedLanguage]);
+
   return (
     <div className="row g-3">
-      {movies?.map((movie) => {
+      {searchQuery?searchedMovies?.map((movie) => {
+        return (
+          <div className="col-xl-2 col-md-3 col-xs-6" key={movie.id}>
+            <MovieCard movie={movie} />
+          </div>
+        );
+      }): movies?.map((movie) => {
         return (
           <div className="col-xl-2 col-md-3 col-xs-6" key={movie.id}>
             <MovieCard movie={movie} />

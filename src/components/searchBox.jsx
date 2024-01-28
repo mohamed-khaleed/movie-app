@@ -1,7 +1,9 @@
+import { useEffect } from "react";
 
 
 
-function SearchBox({searchQuery,setSearchQuery,setMovies}) {
+function SearchBox({searchQuery,setSearchQuery,setSearchedMovies}) {
+
   //  const apiKey="bebea00a770e7201f372567aaed2893a"
   // useEffect(() => {
   //   axios
@@ -28,7 +30,21 @@ function SearchBox({searchQuery,setSearchQuery,setMovies}) {
   //   console.log(searchQuery)
     
   // }
-  
+   useEffect(function(){
+    async function fetchData(){
+      try{
+      
+        const response=await fetch(`https://api.themoviedb.org/3/search/movie?api_key=bebea00a770e7201f372567aaed2893a&query=${searchQuery}`)
+        const data=await response.json()
+        if(searchQuery){
+          setSearchedMovies(data.results)
+        }
+      }catch(error){
+        console.log(error)
+      }
+    }
+    fetchData()
+   },[searchQuery,setSearchedMovies])
   
   return (
     <div className=" search-box p-5 mb-4   bg-main-color">
@@ -49,9 +65,7 @@ function SearchBox({searchQuery,setSearchQuery,setMovies}) {
               onChange={(e)=>setSearchQuery(e.target.value)}
             />
           </div>
-          <div className="col-3 ">
-          <button  className=" bg-secondary-color main-color  search-btn">search</button>
-          </div>
+      
         </div>
       </div>
     </div>
